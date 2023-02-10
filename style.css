@@ -44,9 +44,9 @@ h1{
 }
 @keyframes header{
     0% {color: rgb(173, 248, 146); left: 0px;}
-    25%{color: rgb(125, 248, 54); left: 700px;}
-    50%{color: rgb(159, 248, 43); left: 0px;}
-    75%{color: rgb(106, 255, 0); left: 700px;}
+    25%{color: rgb(156, 253, 100); left: 645px;}
+    50%{color: rgb(148, 233, 38); left: 0px;}
+    75%{color: rgb(106, 255, 0); left: 645px;}
     100%{color: lawngreen; left: 0px;}
 }
 
@@ -98,7 +98,4 @@ p {
     font-size: 95px;
     
     font-family: cursive;
-}
-.ul{
-    font-size: 70px;
 }
