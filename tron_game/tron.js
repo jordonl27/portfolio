@@ -159,7 +159,7 @@ function draw () {
         
         playableCells.delete(`${Player.x}x${Player.y}y`);
         
-if (!Player.dead) {
+    if (!Player.dead) {
     if(Player.direction === "LEFT") Player.x -= unit;
     if(Player.direction === "UP") Player.y -= unit;
     if(Player.direction === "RIGHT") Player.x -= unit;
@@ -172,79 +172,79 @@ if (!Player.dead) {
  
  const game = setInterval(draw, 100);
 
-// function createResultsScreen(color) {
-//     const resultNode = document.createElement(`div`);
+ function createResultsScreen(color) {
+    const resultNode = document.createElement(`div`);
 
-//     resultNode.id = "result";
-//     resultNode.style.color = color || `#fff`;
-//     resultNode.style.position = `fixed`;
-//     resultNode.style.top = 0;
-//     resultNode.style.display = `grid`;
-//     resultNode.style.gridTemplateColumns = `1fr`;
-//     resultNode.style.width = `100%`;
-//     resultNode.style.height = `100vh`;
-//     resultNode.style.justifyContent = `centre`;;
-//     resultNode.style.alignItems = `centre`;
-//     resultNode.style.background = `#00000088`
+       resultNode.id = "result";
+       resultNode.style.color = color || `#fff`;
+       resultNode.style.position = `fixed`;
+       resultNode.style.top = 0;
+       resultNode.style.display = `grid`;
+       resultNode.style.gridTemplateColumns = `1fr`;
+       resultNode.style.width = `100%`;
+       resultNode.style.height = `100vh`;
+       resultNode.style.justifyContent = `centre`;
+       resultNode.style.alignItems = `centre`;
+       resultNode.style.background = `#00000088`
 
-// const resultText = document.createElement(`h1`);
-//       resultText.innerText = outcome;
-//       resultText.style.fontFamily = `cursive`;
-//       resultText.style.textTransform = `uppercase`;
+    const resultText = document.createElement(`h1`);
+       resultText.innerText = outcome;   
+       resultText.style.fontFamily = `cursive`;
+       resultText.style.textTransform = `uppercase`;
 
-// const restartbutton = document.createElement(`button`);
-// restartbutton.innerText = `Restart (Enter)`;
-// restartbutton.style.fontFamily = `Trebuchet MS, cursive`; 
-// restartbutton.style.textTransform = `uppeercase`;
-// restartbutton.style.padding = `10px 30px`;
-// restartbutton.style.fontsize =`1.2rem`;
-// restartbutton.style.margin = `0 auto`;
-// restartbutton.style.cursor = `pointer`;
-// restartbutton.onclick = resetGame;
+    const restartbutton = document.createElement(`button`);
+       restartbutton.innerText = `Restart (Enter)`;
+       restartbutton.style.fontFamily = `Trebuchet MS, cursive`; 
+       restartbutton.style.textTransform = `uppercase`;
+       restartbutton.style.padding = `10px 30px`;
+       restartbutton.style.fontsize =`1.2rem`;
+       restartbutton.style.margin = `0 auto`;
+       restartbutton.style.cursor = `pointer`;
+       restartbutton.onclick = resetGame;
 
-// resultNode.appendChild(resultText);
-// resultNode.appendChild(restartbutton);
-// document.querySelector(`body`).appendChild(resultNode);
+       resultNode.appendChild(resultText);
+       resultNode.appendChild(restartbutton);
+       document.querySelector(`body`).appendChild(resultNode);
 
-// document.addEventListener(`keydown`, (e) => {
-//     let key = event.keyCode;
-//     if (key == 13 || key == 32 || key == 27 || key == 82)
-//     resetGame(); 
-//     });
-// };
-
-
-// function resetGame() {
-
-//     const result = document.getElementById(`result`);
-//     if(result) result.remove();
+ document.addEventListener(`keydown`, (e) => {
+     let key = Event.keyCode;
+     if (key == 13 || key == 32 || key == 27 || key == 82)
+     resetGame(); 
+     });
+ };
 
 
-//     context.clearRect(0, 0, tron.width, tron.height);
-//     drawBackground();
+ function resetGame() {
 
-// playableCells = getPlayablecells(tron, unit);
+     const result = document.getElementById(`result`);
+     if(result) result.remove();
 
-// Player.allInstances.forEach(Player => {
-//     Player.x = Player.startX;
-//     Player.y = Player.startY;
-//     Player.dead = false;
-//     Player.direction = "";
-//     Player.key = "";
-// });
-// playerCount = Player.allInstances.length;
-// drawStartingpositions(Player.allInstances);
 
-// outcome = "";
-// winnerColor = "";
+     context.clearRect(0, 0, tron.width, tron.height);
+     drawBackground();
 
-// clearInterval(game);
-// game  setInterval(draw, 100);
-// };
+ playableCells = getPlayablecells(tron, unit);
 
-// document.querySelector(`#Startbutton`).addEventListener(`click`, () => {
-//     document.querySelector(`#Startbutton`).style.dispaly = `none`;
-// });
+ Player.allInstances.forEach(Player => {
+     Player.x = Player.startX;
+     Player.y = Player.startY;
+     Player.dead = false;
+     Player.direction = "";
+     Player.key = "";
+ });
+ playerCount = Player.allInstances.length;
+    drawStartingpositions(Player.allInstances);
+
+ outcome = "";
+ WinnerColor = "";
+
+ clearInterval(game);
+   game.setInterval(draw, 100);
+ };
+
+     document.querySelector(`#start-button`).addEventListener(`click`, () => {
+     document.querySelector(`#start-button`).style.dispaly = `none`;
+ });
 
 
 
